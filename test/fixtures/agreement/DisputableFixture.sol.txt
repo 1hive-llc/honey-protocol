@@ -1,0 +1,13 @@
+pragma solidity 0.4.24;
+import "@aragon/os/contracts/apps/disputable/DisputableAragonApp.sol";
+contract DisputableFixture is DisputableAragonApp {
+    uint256 public outcome;
+    function initialize() external { initialized(); }
+    function submit() external returns (uint256) { return _registerDisputableAction(0, "fixture", msg.sender); }
+    function canChallenge(uint256) external view returns (bool) { return true; }
+    function canClose(uint256) external view returns (bool) { return true; }
+    function _onDisputableActionChallenged(uint256, uint256, address) internal { outcome = 1; }
+    function _onDisputableActionRejected(uint256) internal { outcome = 3; }
+    function _onDisputableActionAllowed(uint256) internal { outcome = 4; }
+    function _onDisputableActionVoided(uint256) internal { outcome = 2; }
+}
