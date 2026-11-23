@@ -64,8 +64,8 @@ listed deployments.
 
 ## Separate from the Honey v1 governance deployment
 
-- **Fluid Proposals streaming pilot.** The [public pilot proposal](https://forum.1hive.org/t/fluid-proposal-gardens-swarm/5368)
-  describes a separate experiment. The Gnosis proxy
+- **Fluid Proposals streaming pilot.** This is listed separately from the
+  core governance contracts above. The Gnosis proxy
   [`0x856d17d5323794a7db0ba17f59d4b88fd402d321`](https://gnosisscan.io/address/0x856d17d5323794a7db0ba17f59d4b88fd402d321)
   first has code at block 31,113,810; the previous block returns empty code.
   The [creation transaction](https://gnosisscan.io/tx/0xc17ed965bd1f08f11acbd2b8d16eb723ce6ec1b7d371a93fd7db2904165ebdd2)
