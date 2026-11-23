@@ -10,17 +10,21 @@ that its current configuration or permissions are safe. The public 1Hive docs
 identify [Gardens v1 as the Common Pool governance
 interface](https://1hive.org/Curating-community-contributions).
 
+For how these components fit together, see the [local protocol background][background].
+
+## Core deployment
+
 | Component | Gnosis address | Address provenance |
 | --- | --- | --- |
-| Honey token (HNY) | `0x71850b7e9ee3f13ab46d67167341e4bdc905eef9` | [1Hive protocol: Honey token](https://wiki.1hive.org/developers/1hive-protocol#incentivised-sliding-window-oracle) |
-| Common Pool (Aragon Agent/Vault) | `0x4ba7362f9189572cbb1216819a45aba0d0b2d1cb` | [1Hive protocol: Agent/Vault](https://wiki.1hive.org/developers/1hive-protocol#1hive-aragon-dao-addresses), [public Gardens v1 address list][addresses] |
-| DAO Kernel | `0x8ccbeab14b5ac4a431fffc39f4bec4089020a155` | [1Hive protocol: DAO/Kernel][dao] |
-| Aragon ACL | `0xbc4fb635636b81e60a4e356c4dceb53cac507d03` | [1Hive protocol: ACL][dao] |
-| Conviction Voting | `0x0b21081c6f8b1990f53fc76279cc41ba22d7afe2` | [1Hive protocol: ConvictionVoting][dao] |
-| Decision Voting (Disputable Voting) | `0xfbd0b2726070a9d6aff6d7216c9e9340eae68b2a` | [1Hive protocol: DisputableVoting][dao] |
-| Agreement | `0x59a15718992a42082ab2306bc6cbd662958a178c` | [1Hive protocol: Agreement][dao] |
-| Hooked Token Manager | `0xed062e26c8f41a9088d060156edc7fc6c17d5825` | [1Hive protocol: HookedTokenManager][dao] |
-| Celeste court | `0x44e4fcfed14e1285c9e0f6eae77d5fdd0f196f85` | [1Hive protocol: Celeste and modules (xDai)][court] |
+| Honey token (HNY) | `0x71850b7e9ee3f13ab46d67167341e4bdc905eef9` | [Developer inventory and historical FAQ][sources] |
+| Common Pool (Aragon Agent/Vault) | `0x4ba7362f9189572cbb1216819a45aba0d0b2d1cb` | [Developer inventory: Agent/Vault][sources], [public Gardens v1 address list][addresses] |
+| DAO Kernel | `0x8ccbeab14b5ac4a431fffc39f4bec4089020a155` | [Developer inventory: DAO/Kernel][sources] |
+| Aragon ACL | `0xbc4fb635636b81e60a4e356c4dceb53cac507d03` | [Developer inventory: ACL][sources] |
+| Conviction Voting | `0x0b21081c6f8b1990f53fc76279cc41ba22d7afe2` | [Developer inventory: ConvictionVoting][sources] |
+| Decision Voting (Disputable Voting) | `0xfbd0b2726070a9d6aff6d7216c9e9340eae68b2a` | [Developer inventory: DisputableVoting][sources] |
+| Agreement | `0x59a15718992a42082ab2306bc6cbd662958a178c` | [Developer inventory: Agreement][sources] |
+| Hooked Token Manager | `0xed062e26c8f41a9088d060156edc7fc6c17d5825` | [Developer inventory: HookedTokenManager][sources] |
+| Celeste court | `0x44e4fcfed14e1285c9e0f6eae77d5fdd0f196f85` | [Developer inventory: Celeste and modules (xDai)][sources] |
 
 Celeste is the documented legacy court. This inventory does not establish which
 Agreement setting governs a particular proposal or dispute, whether there are
@@ -86,7 +90,8 @@ listed deployments.
   is for review. No activated Gnosis migration or production address is
   asserted by this manifest. Do not treat it as the court listed above.
 
-[dao]: https://wiki.1hive.org/developers/1hive-protocol#1hive-aragon-dao-addresses
-[court]: https://wiki.1hive.org/developers/1hive-protocol#celeste-and-modules-addresses
 [addresses]: https://github.com/lkngtn/gardens-v1-deprecation/blob/1e219193a562b37563491dde42497230a8b31df4/src/addresses.ts#L7-L16
 [shared]: https://gnosisscan.io/tx/0x9bf0055eca264a8de18612a3e1f0eccb89e59a8c511b97a4d4aefd60cc4fde63
+
+[background]: gnosis-honey-v1-background.md
+[sources]: gnosis-honey-v1-background.md#historical-sources
