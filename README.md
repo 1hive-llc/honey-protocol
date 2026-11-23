@@ -7,6 +7,8 @@ optimistic/execution and Agreement adapters, related local tests, and supporting
 Foundry libraries. It omits deploy/broadcast scripts, historical rehearsals, UI,
 private Git history, the GPL Celeste vendor tree and root Celeste prototype tests.
 
+For legacy on-chain addresses, see the [Honey v1 Gnosis deployment manifest](docs/gnosis-honey-v1.md).
+
 ## Reproduce locally
 
 Install Foundry and allow it to fetch Solidity 0.8.30 once, then run:
