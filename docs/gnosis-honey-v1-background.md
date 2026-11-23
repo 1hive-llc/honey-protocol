@@ -32,10 +32,10 @@ and the deployment evidence shown there.
 
 ## Other addresses in the historical Gnosis developer inventory
 
-These entries are transcribed facts from the developer inventory, outside
-the manifest's pinned on-chain checks. The historical Celeste Voting entry
-is omitted because the source does not give a full 20-byte address. The
-inventory also lists a Polygon deployment, outside the scope of this guide.
+These entries are from the historical developer inventory except where
+noted. Only the Voting and Subscriptions entries in this table were also
+checked against the court at the manifest block. The inventory also lists
+a Polygon deployment, outside the scope of this guide.
 
 | Historical component | Documented Gnosis address |
 | --- | --- |
@@ -47,8 +47,19 @@ inventory also lists a Polygon deployment, outside the scope of this guide.
 | Collateral Requirement Updater | `0xc08fbc829a879470c15916aad14e85905e6ab901` |
 | Celeste Dispute module | `0xec7904e20b69f60966d6c6b9dc534355614dd922` |
 | Celeste Registry module | `0x8c9968a2b16bc1cd0ead74f5eef25e899e795501` |
+| Celeste Voting module (deployment output and pinned court read) | `0x1a0d15f1f6d90c2b71eba3859a1f30c91e5af9b8` |
 | Celeste Treasury module | `0xeac1dc5ccf09e2b816f9544878cd513728fa6af7` |
-| Celeste Subscriptions module | `0x4e4ea6845d7656d569dc4ccc7b68bb3023720837` |
+| Celeste Subscriptions module (developer inventory and pinned court read) | `0x4e4ea6845d7656d569dc4ccc7b68bb3023720837` |
+
+At block **49,432,749**, the Celeste court listed in the manifest returned the
+table values from `getVoting()` and `getSubscriptions()`. This records the
+configured addresses at that block, not whether either service was usable.
+The wiki's Voting entry was truncated; the full address matches the
+[Voting v1.0 creation receipt](https://gnosisscan.io/tx/0xe9fc244f72c7d433315be68cc9280a5cff3ee2c112ca86f10a3f8c2bf370c20a).
+The [pinned Celeste deployment output](https://github.com/metrodao/celeste-deploy/blob/ba0c1a2e4727f4d04bf6f56112fb3e54ed30205e/data/output/court.xdai.json)
+also records a separate [Subscriptions v1.0 creation receipt](https://gnosisscan.io/tx/0x3ac3ef47d76b72312a451c617407dac38e87886748fae3fa89ddb6c88d0bf0de)
+at `0x41ab49872ed459c840d0caecd47fcdc201c48307`, which differs from the
+Subscriptions address returned by the court at the manifest block.
 
 The developer inventory describes the oracle as an HNY price reference
 for certain funding payouts and Celeste fees. It lists separate contracts
